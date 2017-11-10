@@ -17,12 +17,18 @@ import setCookie from '../support/action/setCookie';
 import setInputField from '../support/action/setInputField';
 import setPromptText from '../support/action/setPromptText';
 import submitForm from '../support/action/submitForm';
+import chooseFile from '../support/action/chooseFile';
 
 
 defineSupportCode(({ When }) => {
     When(
         /^I (click|doubleclick) on the (link|button|element) "([^"]*)?"$/,
         clickElement
+    );
+
+    When(
+        /^I choose file on the path "([^"]*)?" with element "([^"]*)?"$/,
+        chooseFile
     );
 
     When(

@@ -10,7 +10,10 @@ exports.config = {
     // `wdio` will be called from there.
     //
     specs: [
-        './src/features/**/*.feature',
+        // './src/features/Thanh_Tra_2/1_Thanhtra_TCD_XLĐ_GQ_GiaoTTXM.feature',
+        //'./src/features/Thanh_Tra_2/2_ThanhTra_TCD__XLD_TuTTXM.feature',
+        './src/features/Thanh_Tra_2/4_LD_tu_XL_GQ_Giao_TTXM.feature',
+        //'./src/features/Thanh_Tra_2/5_TCD_XLD_tuTTXM_LDtuGQ.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -34,7 +37,7 @@ exports.config = {
     // spawned. The property handles how many capabilities from the same test
     // should run tests.
     //
-    maxInstances: 5,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check
     // out the Sauce Labs platform configurator - a great tool to configure your
@@ -44,7 +47,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an
         // in-house Selenium grid with only 5 firefox instance available you can
         // make sure that not more than 5 instance gets started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         browserName: 'chrome',
     }],
@@ -71,7 +74,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
-    baseUrl: 'http://localhost:8080',
+    baseUrl: '',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -118,7 +121,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['spec'],
+    reporters: ['cucumber'],
     //
     // If you are using Cucumber you need to specify the location of your step
     // definitions.
@@ -131,6 +134,8 @@ exports.config = {
         ],
         // <boolean< Treat ambiguous definitions as errors
         failAmbiguousDefinitions: true,
+
+        
         // <boolean> invoke formatters without executing steps
         // dryRun: false,
         // <boolean> abort the run on first failure
